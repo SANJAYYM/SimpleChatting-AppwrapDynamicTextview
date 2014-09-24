@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+<TableRow 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#0020C2">  
+
+    <Button
+        android:id="@+id/Back_Chat"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:background="#0020C2"
+        android:text="←"
+        android:onClick="onBackPressed"
+        android:textColor="@android:color/white"
+        android:textSize="30sp" />
+ 
+     <TextView
+        android:id="@+id/online_user_name"
+        android:layout_width="270dp"
+        android:layout_height="40dp"
+        android:background="#0020C2"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+    
+</TableRow>
+    
+    <Spinner
+        android:id="@+id/onlineUserSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_gravity="center_vertical"
+        android:background="@android:color/holo_blue_light"
+        android:gravity="center_vertical"
+        android:paddingBottom="10dp"
+        android:textAlignment="center" />
+	
+    <ScrollView
+        android:id="@+id/outputScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:background="@drawable/backg"
+        android:layout_weight="0.27" >
+	    
+            <LinearLayout
+                android:id="@+id/ScrollRelative"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_height="340dp" >
+            
+	     <TextView 
+	        android:id="@+id/outputTextView"
+	        android:layout_width="fill_parent" 
+	        android:layout_height="wrap_content"
+	        android:paddingLeft="5dp" 
+	        android:paddingRight="5dp" 
+	        android:textColor="#2ecc71"
+	        android:textSize="20dp"
+	        android:paddingTop="5dp" />
+
+	    <TextView
+	        android:id="@+id/outputTextView1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/outputTextView"
+	        android:textColor="#2980b9"
+	        android:textSize="20dp"
+	        android:text="" />
+	    
+	    </LinearLayout>
+	</ScrollView>
+	
+
+	<LinearLayout 
+	    android:id="@+id/linearLayout1"
+	    android:orientation="horizontal" 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content" 
+	    android:paddingLeft="5dp" 
+	    android:paddingRight="5dp"
+	    android:paddingTop="3dp"
+	    android:paddingBottom="5dp"
+	    android:baselineAligned="true">
+	    <EditText 
+	        android:layout_weight="1" 
+	        android:id="@+id/inputEditText"
+	        android:hint="@string/say"
+	        android:layout_height="45dp" 
+	        android:background="#ffff"
+	        android:layout_width="0dip" >
+	    </EditText>
+	    <Button 
+	        android:text=""
+	        android:textSize="20sp"
+	        android:layout_height="50dp" 
+	        android:layout_width="45dp"
+	        android:onClick="onSendClicked"
+	        android:textColor="@android:color/white"
+	        android:background="@drawable/sendicon1"
+	        android:id="@+id/sendBtn">
+	    </Button>
+    </LinearLayout>
+    
+</LinearLayout>

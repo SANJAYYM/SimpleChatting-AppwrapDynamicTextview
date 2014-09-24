@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+<item
+        android:id="@+id/Findfriendsonmap "
+        android:orderInCategory="100"
+        android:actionLayout="@layout/activity_result"
+        android:showAsAction="always"
+        android:title="@string/friends_on_map"/>    
+<item
+        android:id="@+id/Exit "
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/exit"/>    
+
+</menu>

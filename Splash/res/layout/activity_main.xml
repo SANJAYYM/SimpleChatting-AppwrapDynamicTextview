@@ -1,0 +1,116 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backg"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/loadView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:orientation="vertical" >
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/descText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:layout_marginTop="90dp"
+        android:layout_weight="1.34"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="@string/Description"
+        android:textColor="#ffff"
+        android:textSize="25dp" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="248dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/loadView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="68dp"
+        android:ems="10"
+        android:hint="@string/userName" />
+<requestFocus />
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/loadView"
+        android:layout_alignLeft="@+id/editTextName"
+        android:layout_alignRight="@+id/editTextName"
+        android:layout_marginBottom="28dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword" >
+
+        
+    </EditText>
+
+    <LinearLayout
+        android:id="@+id/Hidden_Selectors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <Spinner
+            android:id="@+id/spinnerLevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/topic_arrays" />
+
+        <Button
+            android:id="@+id/withoutBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onWithoutClicked"
+            android:text="@string/without_matchmaking"
+            android:width="150dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/SignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/loadView"
+        android:text="SIGN IN"
+        android:textColor="#ffff"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/withBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_above="@+id/Hidden_Selectors"
+        android:layout_alignLeft="@+id/Hidden_Selectors"
+        android:background="#ffff"
+        android:onClick="onWithClicked"
+        android:text="Continue"
+        android:textColor="@android:color/holo_blue_dark"
+        android:width="150dp" />
+
+    <Button
+        android:id="@+id/connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/loadView"
+        android:background="@android:color/transparent"
+        android:onClick="onConnectClicked"
+        android:text="➲"
+        android:textColor="#ffff"
+        android:textSize="30sp" />
+
+</RelativeLayout>
